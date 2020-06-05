@@ -13,8 +13,10 @@ module.exports = function(server) {
     // requisita o service de cursos que já tem os metodos HTTP mapeados
     // e o schema do banco definido
     const cursosService = require('../api/cursos/service');
+    const contatosService = require('../api/contatos/service');
 
     // registra esse service nas rotas do express na url
     // meuservidor:porta/api/cursos
     cursosService.register(routes, '/cursos');
+    contatosService.register(routes, '/contatos');
 }
